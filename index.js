@@ -11,7 +11,7 @@ const chance = new Chance();
 const encounterGrammar = tracery.createGrammar({
     encounter: [
         '#monster.a.capitalize# appears!\n',
-        '#Some monster.s# appear!\n',
+        'Some #monster.s# appear!\n',
         '#monster.a.capitalize# attacks!\n',
         'Some #monster.s# attack!\n',
         'You snuck up on #monster.a#!\n',
