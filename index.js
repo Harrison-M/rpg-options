@@ -13,7 +13,7 @@ const encounterGrammar = tracery.createGrammar({
         '#monster.a.capitalize# appears!\n',
         '#Some monster.s# appear!\n',
         '#monster.a.capitalize# attacks!\n',
-        '#Some monster.s# attack!\n',
+        'Some #monster.s# attack!\n',
         'You snuck up on #monster.a#!\n',
         'You snuck up on some #monster.s#!\n',
         'Ambushed by #monster.s#!\n'
