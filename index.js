@@ -9,7 +9,15 @@ const Wordnik = require('wordnik-as-promised');
 
 const chance = new Chance();
 const encounterGrammar = tracery.createGrammar({
-    encounter: ['#monster.a.capitalize# appears!\n'],
+    encounter: [
+        '#monster.a.capitalize# appears!\n',
+        '#Some monster.s# appear!\n',
+        '#monster.a.capitalize# attacks!\n',
+        '#Some monster.s# attack!\n',
+        'You snuck up on #monster.a#!\n',
+        'You snuck up on some #monster.s#!\n',
+        'Ambushed by #monster.s#!\n'
+    ],
     monster: monsters
 });
 encounterGrammar.addModifiers(tracery.baseEngModifiers);
@@ -28,7 +36,7 @@ co(function* () {
 
     const options = [
         chance.pickone(['fight', 'attack']),
-        ...allowed.slice(0, chance.integer({ min: 2, max: 3 })),
+        ...chance.shuffle(allowed).slice(0, chance.integer({ min: 2, max: 3 })),
         ...chance.pickone([['item'], ['run'], ['item', 'run']])
     ];
     const selected = chance.integer({ min: 0, max: options.length - 1 });
