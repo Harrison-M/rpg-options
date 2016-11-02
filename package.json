@@ -1,0 +1,20 @@
+{
+  "name": "rpg-options",
+  "version": "1.0.0",
+  "description": "RPG Options Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chance": "^1.0.4",
+    "co": "^4.6.0",
+    "qauth": "^0.1.1",
+    "this-is-probably-ok-to-say": "^1.0.100",
+    "tracery-grammar": "^2.7.2",
+    "twitter": "^1.4.0",
+    "wordnik-as-promised": "0.0.1"
+  }
+}
